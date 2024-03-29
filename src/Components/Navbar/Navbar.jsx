@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Navbar.css'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -49,9 +49,9 @@ export default function Navbar() {
           <a href="#" className="text-md font-semibold leading-6 text-gray-50 rounded-md bg-[#011C36] px-2 py-1.5 transition hover:bg-blue-600">
               Get started 
             </a>
-            <a href="/login" className="text-md font-semibold leading-6 text-gray-50">
+            <Link to ="/login" className="text-md font-semibold leading-6 text-gray-50">
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
             
           </div>
         </nav>

@@ -6,7 +6,6 @@ import Team from './Components/team/team'
 import Contact from './Components/contact/Contact'
 import Footer from './Components/footer/footer'
 
-
 const App = () => {
   return (
     <div>
@@ -16,6 +15,7 @@ const App = () => {
       <Team/>
       <Contact/>
       <Footer/>
+      
     </div>
     
   )
