@@ -1,11 +1,11 @@
-import React from 'react'
-function login() {
+import React from "react";
+function Login() {
   return (
     <div>
-        <Navbar/>
-        <h1>HELO</h1>
+      <Navbar />
+      <h1>HELO</h1>
     </div>
-  )
+  );
 }
 
-export default login
+export default Login;
