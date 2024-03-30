@@ -67,12 +67,14 @@ export default function Login() {
           </div>
 
           <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-[#00aeef] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#36799e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Sign in
-            </button>
+            <a href="/Dashboard">
+              <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-[#00aeef] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#36799e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Sign in
+              </button>
+            </a>
           </div>
         </form>
 
