@@ -1,16 +1,12 @@
-import React from 'react'
-import DashNavbar from '../Dashboard/DashNavbar'
-import Dashpage from '../Dashboard/Dashpage'
-
+import React from "react";
+import DashNavbar from "../Dashboard/DashNavbar";
 
 function Landingpage() {
   return (
-    <div >
-      <DashNavbar/>
-      <Dashpage/>
-
+    <div>
+      <DashNavbar />
     </div>
-  )
+  );
 }
 
-export default Landingpage
+export default Landingpage;

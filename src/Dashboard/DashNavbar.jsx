@@ -1,85 +1,45 @@
-import { Fragment } from "react";
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { BsArrowLeftShort } from "react-icons/bs";
+import { RiDashboard3Line } from "react-icons/ri";
 
-const user = {
-  name: "Backle",
-  email: "abc@example.com",
-  imageUrl: "../src/assets/user.png",
-};
+function DashNavbar() {
+  const [open, setOpen] = useState(true);
 
-const navigation = [
-  { name: "Dashboard", href: "#", imageUrl: "./src/assets/dashboard.png", current: false },
-  { name: "Patients", href: "#", imageUrl: "./src/assets/medical.png", current: false },
-  { name: "Appointments", href: "#", imageUrl: "./src/assets/appointment.png", current: false },
-  { name: "Reports", href: "#", imageUrl: "./src/assets/report (1).png", current: false },
-];
-
-
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-export default function DashNavbar() {
   return (
-    <div className="min-h-full flex">
-      <Disclosure as="nav" className="bg-gray-800">
-        {({ open }) => (
-          <>
-            <div className="flex flex-col h-full">
-              <div className="flex-shrink-0 px-8 py-5 justify-center items-center">
-                <a href="/">
-                  <img
-                    className="h-10 w-auto"
-                    src="./src/assets/logo (2).png"
-                    alt="logo"
-                  />
-                </a>
-              </div>
-
-              <div className="flex-grow flex flex-col justify-between h-auto">
-                <div className="flex flex-col items-center border-t border-gray-700 pt-6 pb-3 hover:bg-gray-700">
-                  <img
-                    className="h-10 w-10 rounded-full"
-                    src={user.imageUrl}
-                    alt=""
-                  />
-                  <div className="mt-2 text-sm font-medium leading-none text-white">
-                    Account
-                  </div>
-                </div>
-                <div className="flex flex-col space-y-4 ">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "rounded-md px-3 text-sm font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      <div className="flex flex-col items-center border-t border-gray-700 pt-3 pb-0">
-                        <img className="h-10 w-10" src={item.imageUrl} alt={item.name} /> 
-                        <div className="mt-2 text-sm font-medium leading-none text-white">
-                          {item.name}
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-
-                
-              </div>
-            </div>
-
-            
-          </>
-        )}
-      </Disclosure>
+    <div className="flex">
+      <div
+        className={`bg-[#F9F8F4] h-screen p-5 pt-8 ${
+          open ? "w-[220px]" : "w-[70px]"
+        } duration-300 relative`}
+      >
+        <BsArrowLeftShort
+          className={`bg-white text-gray-900 text-3xl rounded-full absolute top-8 ${
+            open ? "left-[200px] duration-300" : "left-[50px] duration-300"
+          } border border-gray-900 cursor-pointer ${!open ? "rotate-180" : ""}`}
+          onClick={() => setOpen(!open)}
+        />
+        <div>
+          <img
+            src={open ? "./src/assets/logo.png" : "./src/assets/logo (2).png"}
+            className=""
+          />
+        </div>
+        <div className="pt-[70px] px-8 font-bold text-lg flex flex-col justify-between items-left ">
+          <div className="pb-[20px] flex items-center border border-red-950 w-auto">
+            <RiDashboard3Line className="text-4xl " />
+            Dashboard
+          </div>
+          <div className="pb-[20px]">Patient List</div>
+          <div className="pb-[20px]">Appointments</div>
+          <div className="pb-[20px]">Reports</div>
+          <div className="pb-[20px]">Messages</div>
+        </div>
+      </div>
+      <div>
+        <h1>Dashboard</h1>
+      </div>
     </div>
   );
 }
+
+export default DashNavbar;

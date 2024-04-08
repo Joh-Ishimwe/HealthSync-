@@ -7,7 +7,7 @@ export default function Features() {
           <div className="mx-auto max-w-full lg:mx-0 pl-[100px]">
             <h2 className="text-4xl font-bold tracking-tight text-[#ffffff] sm:text-6xl mr-20 text-center max-w-full">Our Features</h2>
             <div className="py-10 flex flex-col lg:flex-row justify-center items-center max-w-full px-4 lg:px-20">
-                <div className="w-full lg:w-[260px] bg-black h-[405px] p-10 rounded-sm mr-20 mb-8 lg:mb-0 lg:mr-8 hover:bg-slate-300 text-blue-950">
+                <div className="w-full lg:w-[260px] bg-black h-[405px] p-10 rounded-sm mr-20 mb-8 lg:mb-0 lg:mr-8">
                     <div className=" lg:ml-8 ml-[30%] flex justify-center items-center rounded-full bg-[#011C36] w-16 h-16 lg:w-28 lg:h-20 mb-6">
                       <img className="w-20 h-auto lg:w-20 lg:h-auto" src="./src/assets/nurse.svg" alt="" />
                     </div>
