@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { RiDashboard3Line } from "react-icons/ri";
+import { FaRegUser } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { RiBarChartFill } from "react-icons/ri";
+import { FaRegMessage } from "react-icons/fa6";
+
 
 function DashNavbar() {
   const [open, setOpen] = useState(true);
@@ -13,29 +18,61 @@ function DashNavbar() {
         } duration-300 relative`}
       >
         <BsArrowLeftShort
-          className={`bg-white text-gray-900 text-3xl rounded-full absolute top-8 ${
+          className={`bg-white text-[#00AFEE] text-3xl rounded-full absolute top-8 ${
             open ? "left-[200px] duration-300" : "left-[50px] duration-300"
-          } border border-gray-900 cursor-pointer ${!open ? "rotate-180" : ""}`}
+          } border border-[#00AFEE] cursor-pointer ${!open ? "rotate-180" : ""}`}
           onClick={() => setOpen(!open)}
         />
         <div>
           <img
-            src={open ? "./src/assets/logo.png" : "./src/assets/logo (2).png"}
-            className=""
+            src={open ? "./src/assets/logo.JPG" : "./src/assets/logo (2).JPG"}
+            className="w-[170px]"
           />
         </div>
-        <div className="pt-[70px] px-8 font-bold text-lg flex flex-col justify-between items-left ">
-          <div className="pb-[20px] flex items-center border border-red-950 w-auto">
-            <RiDashboard3Line className="text-4xl " />
-            Dashboard
-          </div>
-          <div className="pb-[20px]">Patient List</div>
-          <div className="pb-[20px]">Appointments</div>
-          <div className="pb-[20px]">Reports</div>
-          <div className="pb-[20px]">Messages</div>
+        <div className="pt-[50px] px-8 font-bold text-lg flex flex-col justify-between items-left text-[16px]">
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]">
+              <div className={`${!open && "-ml-4"}`}>
+                <RiDashboard3Line className="text-4xl w-auto mr-2.5" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Dashboard</h1>
+            </div>
+          </a>
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE] ">
+              <div className={`${!open && "-ml-4"}`}>
+                <FaRegUser className="text-3xl w-auto mr-4" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Patient List</h1>
+            </div>
+          </a>
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]  ">
+              <div className={`${!open && "-ml-4"}`}>
+                <FaRegCalendarAlt className="text-3xl w-auto mr-4" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Appointments</h1>
+            </div>
+          </a>
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE] ">
+              <div className={`${!open && "-ml-4"}`}>
+                <RiBarChartFill className="text-3xl w-auto mr-4" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Reports</h1>
+            </div>
+          </a>
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]">
+              <div className={`${!open && "-ml-4"}`}>
+                <FaRegMessage className="text-3xl w-auto mr-4" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Messages</h1>
+            </div>
+          </a>
         </div>
       </div>
-      <div>
+      <div className="bg-[#DDF4FC] max-w-100%">
         <h1>Dashboard</h1>
       </div>
     </div>
