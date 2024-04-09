@@ -11,16 +11,16 @@ function DashNavbar() {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="flex">
+    <div className="flex border border-[#00AFEE] ">
       <div
         className={`bg-[#F9F8F4] h-screen p-5 pt-8 ${
           open ? "w-[220px]" : "w-[70px]"
-        } duration-300 relative`}
+        } duration-500 relative`}
       >
         <BsArrowLeftShort
           className={`bg-white text-[#00AFEE] text-3xl rounded-full absolute top-8 ${
-            open ? "left-[200px] duration-300" : "left-[50px] duration-300"
-          } border border-[#00AFEE] cursor-pointer ${!open ? "rotate-180" : ""}`}
+            open ? "left-[200px] duration-300" : "left-[50px] duration-500"
+          } border border-[#00AFEE]  cursor-pointer ${!open ? "rotate-180" : ""}`}
           onClick={() => setOpen(!open)}
         />
         <div>
@@ -29,7 +29,7 @@ function DashNavbar() {
             className="w-[170px]"
           />
         </div>
-        <div className="pt-[50px] px-8 font-bold text-lg flex flex-col justify-between items-left text-[16px]">
+        <div className="pt-[50px] px-8 font-bold text-md flex flex-col justify-between items-left text-[16px]">
           <a href="">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]">
               <div className={`${!open && "-ml-4"}`}>
@@ -72,9 +72,7 @@ function DashNavbar() {
           </a>
         </div>
       </div>
-      <div className="bg-[#DDF4FC] max-w-100%">
-        <h1>Dashboard</h1>
-      </div>
+      
     </div>
   );
 }

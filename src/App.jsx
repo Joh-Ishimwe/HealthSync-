@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Landingpage from "./Landingpage/Landingpage";
 import HospitalSignup from "./pages/HospitalSignup";
 import LandingDashboard from "./LandingDash/LandingDashboard"
+import Schedulingpage from "./Scheduling/Schedulingpage";
+import "./App.css";
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<HospitalSignup/>} />
         <Route path="/Dashboard" element={<LandingDashboard/>}/>
+        <Route path= "/Scheduling" element={<Schedulingpage/>}/>
       </Routes>
     </div>
   );
