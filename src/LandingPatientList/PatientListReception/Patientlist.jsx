@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FaEye } from "react-icons/fa";
-
-function Labtable() {
+import { MdDelete } from "react-icons/md";
+function Patientlist() {
   const [LabExams] = useState([
     {
       patientName: "John Doe",
@@ -23,11 +22,15 @@ function Labtable() {
     },
   ]);
 
+  const handleDelete = (appointmentId) => {
+    if (window.confirm("Are you sure you want to delete this appointment?")) {
+      setAppointments(appointments.filter((app) => app.id !== appointmentId));
+    }
+  };
+
   return (
     <div className="w-[970px] bg-white px-5 pb-5 shadow-xl rounded-lg mt-5">
-      <div className="flex justify-between items-center pt-3 pb-3">
-        
-      </div>
+      <div className="flex justify-between items-center pt-3 pb-3"></div>
       <table className="min-w-full">
         <thead>
           <tr className="text-left text-[11px] font-sans">
@@ -53,11 +56,12 @@ function Labtable() {
               <td>{exam.DateofBirth}</td>
               <td>{exam.PhoneNumber}</td>
               <td>
-                <a href="">
-                  <button className="text-center pl-2 text-lg hover:text-[#00afee] ">
-                    <FaEye />
-                  </button>
-                </a>
+                <button
+                  className="text-[20px] "
+                  onClick={() => handleDelete(appointment.id)}
+                >
+                  <MdDelete className="" />
+                </button>
               </td>
             </tr>
           ))}
@@ -67,4 +71,4 @@ function Labtable() {
   );
 }
 
-export default Labtable;
+export default Patientlist;

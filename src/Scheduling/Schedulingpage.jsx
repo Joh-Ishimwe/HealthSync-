@@ -1,6 +1,6 @@
 import React from "react";
-import DashNavbar from "../Dashboard/DashNavbar";
-import DashbarHor from "../Dashboard/DashbarHor";
+import DashNavbar from "../LandingDash/Dashboard/DashNavbar";
+import DashbarHor from "../LandingDash/Dashboard/DashbarHor";
 import Scheduling from "./Scheduling";
 
 const LandingPatientlist = () => {
@@ -10,7 +10,7 @@ const LandingPatientlist = () => {
       <div>
         <DashbarHor />
         <div className="bg-[#DDF4FC] py-5 px-20 min-h-screen">
-            <h1 className="font-bold text-4xl">Appointments</h1>
+          <h1 className="font-bold text-4xl">Appointments</h1>
           <Scheduling />
         </div>
       </div>
