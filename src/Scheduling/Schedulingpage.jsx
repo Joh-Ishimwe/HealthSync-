@@ -1,14 +1,21 @@
 import React from "react";
+import DashNavbar from "../Dashboard/DashNavbar";
+import DashbarHor from "../Dashboard/DashbarHor";
 import Scheduling from "./Scheduling";
 
-
-function Schedulingpage() {
+const LandingPatientlist = () => {
   return (
     <div className="flex">
-      <Scheduling/>
-
+      <DashNavbar />
+      <div>
+        <DashbarHor />
+        <div className="bg-[#DDF4FC] py-5 px-20 min-h-screen">
+            <h1 className="font-bold text-4xl">Appointments</h1>
+          <Scheduling />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default Schedulingpage;
+export default LandingPatientlist;

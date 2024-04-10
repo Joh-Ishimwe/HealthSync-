@@ -46,7 +46,7 @@ function DashNavbar() {
               <h1 className={` ${!open && "scale-0"} `}>Patient List</h1>
             </div>
           </a>
-          <a href="">
+          <a href="/Scheduling">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]  ">
               <div className={`${!open && "-ml-4"}`}>
                 <FaRegCalendarAlt className="text-3xl w-auto mr-4" />
