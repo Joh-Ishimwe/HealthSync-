@@ -11,7 +11,7 @@ import LandingPatientlist from "./LandingPatientList/LandingPatientlist";
 
 const App = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Landingpage />} />
         <Route path="/login" element={<Login />} />
