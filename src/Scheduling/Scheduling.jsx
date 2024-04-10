@@ -83,6 +83,19 @@ function Scheduling() {
       return true;
     }
   });
+  const [editAppointment, setEditAppointment] = useState(null);
+
+  const handleEdit = (appointment) => {
+    setEditAppointment(appointment);
+    // Open edit modal or form with appointment details populated
+  };
+
+  const handleDelete = (appointmentId) => {
+    if (window.confirm("Are you sure you want to delete this appointment?")) {
+      setAppointments(appointments.filter((app) => app.id !== appointmentId));
+    }
+  };
+
 
   return (
     <div>
@@ -219,7 +232,7 @@ function Scheduling() {
                 <button
                   onClick={() => setShowModal(false)}
                   type="button"
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-black shadow-sm px-4 py-2 bg-blue-50 text-base font-medium text-black hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
                 >
                   Cancel
                 </button>
@@ -304,13 +317,9 @@ function Scheduling() {
                   {appointment.status}
                 </span>
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
-                <button
-                  onClick={() => handleEditAppointment(appointment)}
-                  className="text-[#00afee] hover:text-[#36799e]"
-                >
-                  Edit
-                </button>
+              <td className="text-[15px] flex items-center justify-between w-20 pt-4">
+                <button onClick={() => handleEdit(appointment)}>Edit</button>
+                <button onClick={() => handleDelete(appointment.id)}>Delete</button>
               </td>
             </tr>
           ))}

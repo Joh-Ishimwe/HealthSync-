@@ -9,6 +9,24 @@ function Billing() {
       appointmentDate: "04/05/2024",
       account: "2550",
     },
+    {
+      patientName: "John Doe",
+      type: "Testosteron",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+    },
+    {
+      patientName: "John Doe",
+      type: "Testosteron",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+    },
+    {
+      patientName: "John Doe",
+      type: "Testosteron",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+    },
   ]);
 
   return (

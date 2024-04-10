@@ -9,6 +9,27 @@ function AppointmentTable() {
       account: "2550",
       status: "Not Seen",
     },
+    {
+      patientName: "John Doe",
+      type: "Consultation",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+      status: "Not Seen",
+    },
+    {
+      patientName: "John Doe",
+      type: "Consultation",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+      status: "Not Seen",
+    },
+    {
+      patientName: "John Doe",
+      type: "Consultation",
+      appointmentDate: "04/05/2024",
+      account: "2550",
+      status: "Not Seen",
+    },
   ]);
 
   return (
