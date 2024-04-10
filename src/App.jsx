@@ -6,6 +6,7 @@ import HospitalSignup from "./pages/HospitalSignup";
 import LandingDashboard from "./LandingDash/LandingDashboard"
 import Schedulingpage from "./Scheduling/Schedulingpage";
 import "./App.css";
+import LandingPatientlist from "./LandingPatientList/LandingPatientlist";
 
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/Signup" element={<HospitalSignup/>} />
         <Route path="/Dashboard" element={<LandingDashboard/>}/>
         <Route path= "/Scheduling" element={<Schedulingpage/>}/>
+        <Route path= "PatientList" element={<LandingPatientlist/>}/>
+      
       </Routes>
     </div>
   );

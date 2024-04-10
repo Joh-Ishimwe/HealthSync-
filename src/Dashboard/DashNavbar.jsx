@@ -11,7 +11,7 @@ function DashNavbar() {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="flex border border-[#00AFEE] ">
+    <div className="flex border border-[#00AFEE]  shadow-xl rounded-lg ">
       <div
         className={`bg-[#F9F8F4] h-screen p-5 pt-8 ${
           open ? "w-[220px]" : "w-[70px]"
@@ -30,7 +30,7 @@ function DashNavbar() {
           />
         </div>
         <div className="pt-[50px] px-8 font-bold text-md flex flex-col justify-between items-left text-[16px]">
-          <a href="">
+          <a href="/Dashboard">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]">
               <div className={`${!open && "-ml-4"}`}>
                 <RiDashboard3Line className="text-4xl w-auto mr-2.5" />
@@ -38,7 +38,7 @@ function DashNavbar() {
               <h1 className={` ${!open && "scale-0"} `}>Dashboard</h1>
             </div>
           </a>
-          <a href="">
+          <a href="/PatientList">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE] ">
               <div className={`${!open && "-ml-4"}`}>
                 <FaRegUser className="text-3xl w-auto mr-4" />

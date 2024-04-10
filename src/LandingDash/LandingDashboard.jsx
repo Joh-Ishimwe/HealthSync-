@@ -8,10 +8,9 @@ function Landingpage() {
     <div className="flex">
       <DashNavbar />
       <div>
-        <DashbarHor/>
-        <DocDashboard/>
+        <DashbarHor />
+        <DocDashboard />
       </div>
-
     </div>
   );
 }
