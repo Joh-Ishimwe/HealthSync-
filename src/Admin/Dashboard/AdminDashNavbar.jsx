@@ -5,6 +5,7 @@ import { FaRegUser } from "react-icons/fa";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { RiBarChartFill } from "react-icons/ri";
 import { FaRegMessage } from "react-icons/fa6";
+import { FaRegCreditCard } from "react-icons/fa6";
 
 
 function AdminDashNavbar() {
@@ -30,7 +31,7 @@ function AdminDashNavbar() {
           />
         </div>
         <div className="pt-[50px] px-8 font-bold text-md flex flex-col justify-between items-left text-[16px]">
-          <a href="/Dashboard">
+          <a href="/admin">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE]">
               <div className={`${!open && "-ml-4"}`}>
                 <RiDashboard3Line className="text-4xl w-auto mr-2.5" />
@@ -38,12 +39,12 @@ function AdminDashNavbar() {
               <h1 className={` ${!open && "scale-0"} `}>Dashboard</h1>
             </div>
           </a>
-          <a href="/PatientList">
+          <a href="/Users">
             <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE] ">
               <div className={`${!open && "-ml-4"}`}>
                 <FaRegUser className="text-3xl w-auto mr-4" />
               </div>
-              <h1 className={` ${!open && "scale-0"} `}>Patient List</h1>
+              <h1 className={` ${!open && "scale-0"} `}>Users</h1>
             </div>
           </a>
           <a href="/Scheduling">
@@ -51,7 +52,15 @@ function AdminDashNavbar() {
               <div className={`${!open && "-ml-4"}`}>
                 <FaRegCalendarAlt className="text-3xl w-auto mr-4" />
               </div>
-              <h1 className={` ${!open && "scale-0"} `}>Appointments</h1>
+              <h1 className={` ${!open && "scale-0"} `}>Scheduling</h1>
+            </div>
+          </a>
+          <a href="">
+            <div className="pb-[20px] flex items-center -ml-5 hover:text-[#00AFEE] ">
+              <div className={`${!open && "-ml-4"}`}>
+                <FaRegCreditCard className="text-3xl w-auto mr-4" />
+              </div>
+              <h1 className={` ${!open && "scale-0"} `}>Billing</h1>
             </div>
           </a>
           <a href="">

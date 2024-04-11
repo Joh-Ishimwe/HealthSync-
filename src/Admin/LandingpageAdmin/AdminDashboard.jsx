@@ -4,7 +4,7 @@ import AdminDashbarHor from "../Dashboard/AdminDashbarHor";
 import PracticeForm from "../../Components/Administrator/Practiceform";
 import Nurseform from "../../Components/Administrator/Nurseform";
 import Patientform from "../../Components/Administrator/Patientform";
-import Doctorform from "../../Components/Administrator/Doctorform";
+import Doctorform from "../../Components/Administrator/AddPeople";
 import Userform from "../../Components/Administrator/Userform";
 import Labform from "../../Components/Administrator/Labform";
 
@@ -18,13 +18,7 @@ const AdminDashboard = () => {
         <div className="flex w-[1000px] gap-10  ">
           <Doctorform />
           <PracticeForm />
-          <Labform/>
-          
-        </div>
-        <div className="flex w-[1000px] gap-10">
-          <Nurseform />
-          <Patientform />
-          <Userform/>
+          <Labform />
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import LandingPatientlist from "./LandingPatientList/LandingPatientlist";
 import LandingRecdash from "./LandingDash/LandingRecDash/LandingRecdash";
 import LandingPatientlistRec from "./LandingPatientList/LandingPatientlistRec";
 import AdminDashboard from "./Admin/LandingpageAdmin/AdminDashboard";
+import Userpage from "./Admin/Users/LandingUsers/Userpage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="Reception" element={<LandingRecdash />} />
         <Route path="PatientlistReception" element={<LandingPatientlistRec />} />
         <Route path="Admin" element={<AdminDashboard />} />
+        <Route path="Users" element={<Userpage />} />
       </Routes>
     </div>
   );
