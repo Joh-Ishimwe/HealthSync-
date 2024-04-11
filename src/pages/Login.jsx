@@ -1,22 +1,37 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState("");
 
   const handleRoleChange = (e) => {
     setRole(e.target.value);
   };
 
+  const handleSignIn = () => {
+    // Redirect user based on selected role
+    if (role === "administrator") {
+      window.location.href = "/admin";
+    } else if (role === "doctor") {
+      window.location.href = "/Dashboard";
+    } else if (role === "receptionist") {
+      window.location.href = "/Reception";
+    } else {
+      // Default redirect if role is not selected
+      window.location.href = "/"; // Change the default redirect URL if needed
+    }
+  };
+
   return (
     <div className="flex min-h-full flex-1 flex-col justify-start px-6 py-56 lg:py-24 lg:px-8 bg-[#011c36]">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <a href="/">
+        <Link to="/">
           <img
             className="mx-auto h-auto w-auto"
             src="./src/assets/logo.png"
             alt="Logo"
           />
-        </a>
+        </Link>
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-50">
           Log in
         </h2>
@@ -53,12 +68,12 @@ export default function Login() {
                 Password
               </label>
               <div className="text-sm">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="font-semibold text-[#36799e] transition-opacity hover:text-gray-400"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
             <div className="mt-2">
@@ -98,25 +113,24 @@ export default function Login() {
           </div>
 
           <div>
-            <a href="/Dashboard">
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-[#00aeef] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#36799e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
-            </a>
+            <button
+              type="button"
+              onClick={handleSignIn}
+              className="flex w-full justify-center rounded-md bg-[#00aeef] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#36799e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Sign in
+            </button>
           </div>
         </form>
 
         <p className="mt-2 text-center text-sm text-gray-500">
-          Not a member?{' '}
-          <a
-            href="/Signup"
+          Not a member?{" "}
+          <Link
+            to="/Signup"
             className="font-semibold leading-6 text-[#00aeef] hover:text-[#36799e]"
           >
             Create an account
-          </a>
+          </Link>
         </p>
       </div>
     </div>
