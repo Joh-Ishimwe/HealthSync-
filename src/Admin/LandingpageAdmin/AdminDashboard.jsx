@@ -2,10 +2,7 @@ import React from "react";
 import AdminDashNavbar from "../Dashboard/AdminDashNavbar";
 import AdminDashbarHor from "../Dashboard/AdminDashbarHor";
 import PracticeForm from "../../Components/Administrator/Practiceform";
-import Nurseform from "../../Components/Administrator/Nurseform";
-import Patientform from "../../Components/Administrator/Patientform";
 import Doctorform from "../../Components/Administrator/AddPeople";
-import Userform from "../../Components/Administrator/Userform";
 import Labform from "../../Components/Administrator/Labform";
 
 const AdminDashboard = () => {
